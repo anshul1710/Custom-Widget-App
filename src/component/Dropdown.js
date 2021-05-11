@@ -7,7 +7,7 @@ const Dropdown =({label,options,dropVal,onDropChange})=>{
     const ref=useRef();
     useEffect(()=>{
 document.body.addEventListener('click',(event)=>{
-    if(ref.current.contains(event.target)){
+    if(ref.current && ref.current.contains(event.target)){
     return;
     }
     setOpen(false);
